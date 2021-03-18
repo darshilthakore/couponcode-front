@@ -1,0 +1,37 @@
+nav {
+    /* position: relative; */
+    background-color: blueviolet;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items:stretch;
+    position: absolute;
+}
+
+.amount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    /* width: 50%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.apply-code {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+button {
+    margin: 10px;
+}

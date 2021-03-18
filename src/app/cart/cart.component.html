@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Coupon</a>
+    <span class="navbar-text"></span>
+
+</nav>
+
+<div class="container">
+    <div class="amount">
+        <div>
+            <input [(ngModel)]="amount" type="text" placeholder="Enter Amount" #amt>
+        </div>
+
+        <div>
+            <h3>Total Amount</h3>
+
+            <b *ngIf="amount != ''"> Rs. {{amount}}</b>
+    
+            <div *ngIf="coupon_check">
+                <p>Coupon Applied</p>
+                <ul>
+                    <li>
+                        Amount: {{amount}}
+                    </li>
+                    <li>Discount: {{discount}}</li>
+                    <li>Total: {{total}}</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="apply-code">
+
+        <b>Have a Coupon Code?</b>
+        <input type="text" placeholder="Enter the Coupon Code" #code>
+        <button class="btn btn-primary" (click)="applyCode(code.value, amt.value)">Apply</button>
+        
+        <div *ngIf="error_check">
+            <b>{{error_msg}}</b>
+        </div>
+
+    </div>
+
+</div>
